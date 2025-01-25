@@ -1,0 +1,19 @@
+{
+  "name": "mailbox-manager",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "vite preview"
+  },
+  "devDependencies": {
+    "@types/gapi.client.gmail-v1": "^0.0.4",
+    "@types/google.accounts": "^0.0.15",
+    "eslint": "^9.19.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.11"
+  }
+}
