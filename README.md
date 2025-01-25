@@ -8,6 +8,8 @@ The goal of this project is to introduce web development concepts such as **HTML
 
 ## Features
 
+[**Live Demo**](https://mailbox-manager.netlify.app/)
+
 ![Screenshot of the app](./app_screenshot.png)
 
 - Google Sign-In to authenticate users.
