@@ -18,22 +18,29 @@ export function displayThreads(threads: any[]): void {
       decodeHtmlEntities(thread.snippet) || '(No snippet available)';
     row.appendChild(snippetCell);
 
-    if (thread.UNREAD === true) {
-      const bluedot = document.createElement('span');
-      const UNREADCell = document.createElement('td');
-      snippetCell.appendChild(bluedot);
-      UNREADCell.textContent = decodeHtmlEntities(thread.UNREAD) || 'UNREAD';
-      snippetCell.classList.add('UNREAD');
-      bluedot.classList.add('dot');
-      row.appendChild(UNREADCell);
-    } else {
-      const readCell = document.createElement('td');
-      row.appendChild(readCell);
-    }
-
     const nbMessages = document.createElement('td');
     row.appendChild(nbMessages);
     nbMessages.textContent = thread.nbMessages;
+
+    if (thread.UNREAD === true) {
+      const bluedot = document.createElement('span');
+      snippetCell.appendChild(bluedot);
+      const UNREADCell = document.createElement('td');
+      UNREADCell.textContent = decodeHtmlEntities(thread.UNREAD) || 'UNREAD';
+      snippetCell.classList.add('UNREAD');
+      threadIdCell.classList.add('UNREAD');
+      bluedot.classList.add('dot');
+      row.appendChild(UNREADCell);
+      nbMessages.classList.add('UNREAD');
+      UNREADCell.classList.add('UNREAD');
+    } else {
+      const readCell = document.createElement('td');
+      row.appendChild(readCell);
+      snippetCell.classList.add('READ');
+      threadIdCell.classList.add('READ');
+      nbMessages.classList.add('READ');
+      row.classList.add('READ');
+    }
 
     snippetCell.appendChild(text);
     tableBody.appendChild(row);

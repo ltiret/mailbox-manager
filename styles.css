@@ -6,7 +6,7 @@ table {
 
 th,
 td {
-  border: 1px solid #7f7f7f;
+  border: 1px solid #a6a6a6;
   padding: 8px;
   text-align: left;
   font-family: Roboto;
@@ -18,10 +18,12 @@ th {
 
 .ThreadID {
   text-align: center;
+  background-color: white;
 }
 
 .Snippet {
   text-align: center;
+  background-color: white;
 }
 
 html {
@@ -41,7 +43,18 @@ html {
 .dot {
   height: 15px;
   width: 15px;
-  background-color: #445ae8;
+  background-color: #475ef2;
   border-radius: 50%;
   display: inline-block;
+}
+
+html {
+  background-image: url('abstract-white-gradient-background-free-vector.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.READ {
+  background-color: white;
 }

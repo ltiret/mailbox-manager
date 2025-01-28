@@ -9,18 +9,21 @@
     <script type="module" src="./app/main.ts"></script>
   </head>
   <body>
-    <h1 class="title">✉️ Mailbox ✉️</h1>
-    <button id="signInButton" disabled>Sign In with Google</button>
-    <button id="logoutButton" disabled>Logout</button>
+    <div>
+      <h1 class="title">✉️ MailboX ✉️</h1>
+      <button id="signInButton" disabled>Sign In with Google</button>
+      <button id="logoutButton" disabled>Logout</button>
 
-    <h2>Inbox Threads</h2>
+      <h2>Inbox Threads</h2>
+    </div>
+
     <table id="threadsTable">
       <thead>
         <tr>
           <th class="ThreadID">Thread ID</th>
           <th class="Snippet">Snippet</th>
-          <th class="Snippet">Is unread ?</th>
           <th class="Snippet">Number of messages</th>
+          <th class="Snippet">Is unread ?</th>
         </tr>
       </thead>
       <tbody></tbody>
