@@ -13,10 +13,29 @@ export function displayThreads(threads: any[]): void {
     row.appendChild(threadIdCell);
 
     const snippetCell = document.createElement('td');
-    snippetCell.textContent =
+    const text = document.createElement('span');
+    text.textContent =
       decodeHtmlEntities(thread.snippet) || '(No snippet available)';
     row.appendChild(snippetCell);
 
+    if (thread.UNREAD === true) {
+      const bluedot = document.createElement('span');
+      const UNREADCell = document.createElement('td');
+      snippetCell.appendChild(bluedot);
+      UNREADCell.textContent = decodeHtmlEntities(thread.UNREAD) || 'UNREAD';
+      snippetCell.classList.add('UNREAD');
+      bluedot.classList.add('dot');
+      row.appendChild(UNREADCell);
+    } else {
+      const readCell = document.createElement('td');
+      row.appendChild(readCell);
+    }
+
+    const nbMessages = document.createElement('td');
+    row.appendChild(nbMessages);
+    nbMessages.textContent = thread.nbMessages;
+
+    snippetCell.appendChild(text);
     tableBody.appendChild(row);
   });
 }

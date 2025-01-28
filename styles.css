@@ -1,0 +1,47 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #7f7f7f;
+  padding: 8px;
+  text-align: left;
+  font-family: Roboto;
+}
+
+th {
+  background-color: #ffffff64;
+}
+
+.ThreadID {
+  text-align: center;
+}
+
+.Snippet {
+  text-align: center;
+}
+
+html {
+  font-family: Roboto;
+}
+
+.title {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.UNREAD {
+  font-weight: bold;
+  background-color: #d7d7d7;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #445ae8;
+  border-radius: 50%;
+  display: inline-block;
+}
