@@ -36,9 +36,7 @@ export function displayThreads(threads: any[]): void {
     } else {
       const readCell = document.createElement('td');
       row.appendChild(readCell);
-      snippetCell.classList.add('READ');
-      threadIdCell.classList.add('READ');
-      nbMessages.classList.add('READ');
+
       row.classList.add('READ');
     }
 
