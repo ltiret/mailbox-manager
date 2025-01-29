@@ -4,7 +4,7 @@ export async function fetchThreads(): Promise<any[]> {
   const accessToken = getAccessToken();
 
   const response = await fetch(
-    'https://www.googleapis.com/gmail/v1/users/me/threads?labelIds=INBOX&maxResults=10',
+    'https://www.googleapis.com/gmail/v1/users/me/threads?labelIds=INBOX&maxResults=20',
     {
       headers: {
         Authorization: `Bearer ${accessToken}`,
