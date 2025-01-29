@@ -9,7 +9,7 @@ let client: google.accounts.oauth2.TokenClient | null = null;
 export function initOAuthClient(): void {
   client = google.accounts.oauth2.initTokenClient({
     client_id: CLIENT_ID,
-    scope: 'https://www.googleapis.com/auth/gmail.readonly',
+    scope: 'https://www.googleapis.com/auth/gmail.modify',
     callback: (tokenResponse: { access_token: string }) => {
       const accessToken = tokenResponse.access_token;
       localStorage.setItem('accessToken', accessToken);

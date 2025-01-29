@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Felipa&display=swap');
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -60,4 +62,19 @@ html {
   border-radius: 50%;
   display: inline-block;
   background: linear-gradient(45deg, #00008b, #00009a);
+}
+
+.felipa-regular {
+  font-family: 'Felipa', serif;
+  font-size: x-large;
+  font-style: normal;
+  text-align: center;
+  font-weight: bold;
+}
+
+.button {
+  border-radius: 12px;
+  color: black;
+  background-image: url('Open enveloppe.png');
+  background-size: cover;
 }

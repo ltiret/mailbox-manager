@@ -4,7 +4,7 @@ export async function fetchThreads(): Promise<any[]> {
   const accessToken = getAccessToken();
 
   const response = await fetch(
-    'https://www.googleapis.com/gmail/v1/users/me/threads?labelIds=INBOX&maxResults=20',
+    'https://www.googleapis.com/gmail/v1/users/me/threads?labelIds=INBOX&maxResults=10',
     {
       headers: {
         Authorization: `Bearer ${accessToken}`,
@@ -47,4 +47,23 @@ export async function fetchThreads(): Promise<any[]> {
   }
 
   return retrunedThreads;
+}
+
+export async function markAsRead(threadid: number) {
+  const accessToken = getAccessToken();
+
+  await fetch(
+    'https://gmail.googleapis.com/gmail/v1/users/me/threads/' +
+      threadid +
+      '/modify',
+    {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        removeLabelIds: ['UNREAD'],
+      }),
+    }
+  );
 }

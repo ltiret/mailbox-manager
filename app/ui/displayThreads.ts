@@ -1,3 +1,5 @@
+import { markAsRead } from '../api/fetchThreads';
+
 export function displayThreads(threads: any[]): void {
   const tableBody = document.querySelector<HTMLTableSectionElement>(
     '#threadsTable tbody'
@@ -26,8 +28,15 @@ export function displayThreads(threads: any[]): void {
       const bluedot = document.createElement('span');
       snippetCell.appendChild(bluedot);
       const UNREADCell = document.createElement('td');
-      UNREADCell.textContent = decodeHtmlEntities(thread.UNREAD) || 'UNREAD';
       snippetCell.classList.add('UNREAD');
+
+      const markasread = document.createElement('button');
+      markasread.classList.add('button');
+      markasread.textContent = 'Mark as read';
+      UNREADCell.appendChild(markasread);
+      markasread.addEventListener('click', function () {
+        markAsRead(thread.id);
+      });
       threadIdCell.classList.add('UNREAD');
       bluedot.classList.add('dot');
       row.appendChild(UNREADCell);
