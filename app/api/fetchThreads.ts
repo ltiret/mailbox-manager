@@ -67,3 +67,22 @@ export async function markAsRead(threadid: number) {
     }
   );
 }
+
+export async function markAsUnread(threadid: number) {
+  const accessToken = getAccessToken();
+
+  await fetch(
+    'https://gmail.googleapis.com/gmail/v1/users/me/threads/' +
+      threadid +
+      '/modify',
+    {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        addLabelIds: ['UNREAD'],
+      }),
+    }
+  );
+}

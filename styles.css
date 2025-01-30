@@ -54,6 +54,7 @@ html {
 .READ {
   background-color: white;
   color: rgb(44, 44, 44);
+  font-weight: normal;
 }
 
 .dot {
@@ -61,7 +62,7 @@ html {
   width: 15px;
   border-radius: 50%;
   display: inline-block;
-  background: linear-gradient(45deg, #00008b, #00009a);
+  background: linear-gradient(45deg, #0000b4, #00009a);
 }
 
 .felipa-regular {
@@ -74,8 +75,24 @@ html {
 }
 
 .button {
-  border-radius: 12px;
-  color: black;
-  background-image: url('Open enveloppe.png');
-  background-size: cover;
+  background-color: #949494bc;
+  color: white; /* Couleur du texte */
+  border: none; /* Pas de bordure */
+  border-radius: 8px; /* Coins arrondis */
+  padding: 10px 28px; /* Espacement intérieur (haut/bas, gauche/droite) */
+  font-size: 12px; /* Taille de la police */
+  cursor: pointer; /* Curseur pointer pour indiquer que c'est cliquable */
+  transition: all 0.3s ease; /* Transition douce pour tous les changements */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée */
+}
+
+.button:hover {
+  background-color: #717171; /* Change la couleur de fond au survol */
+  transform: scale(1.1); /* Agrandit légèrement le bouton au survol */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ombre plus marquée au survol */
+}
+
+button :active {
+  transform: scale(1); /* Réduit l'agrandissement au clic */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre plus légère au clic */
 }
