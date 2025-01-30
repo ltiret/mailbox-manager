@@ -47,7 +47,6 @@ html {
 html {
   background-image: url('abstract-white-gradient-background-free-vector.jpg');
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -79,11 +78,12 @@ html {
   color: white; /* Couleur du texte */
   border: none; /* Pas de bordure */
   border-radius: 8px; /* Coins arrondis */
-  padding: 10px 28px; /* Espacement intérieur (haut/bas, gauche/droite) */
+  padding: 12px 30px; /* Espacement intérieur (haut/bas, gauche/droite) */
   font-size: 12px; /* Taille de la police */
   cursor: pointer; /* Curseur pointer pour indiquer que c'est cliquable */
   transition: all 0.3s ease; /* Transition douce pour tous les changements */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée */
+  align-items: center;
 }
 
 .button:hover {
@@ -95,4 +95,8 @@ html {
 button :active {
   transform: scale(1); /* Réduit l'agrandissement au clic */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre plus légère au clic */
+}
+
+.messages-container {
+  transition: all 0.3s ease-in-out;
 }

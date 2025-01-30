@@ -17,7 +17,7 @@ export function displayThreads(threads: any[]): void {
     const snippetCell = document.createElement('td');
     const text = document.createElement('span');
     text.textContent =
-      decodeHtmlEntities(thread.snippet) || '(No snippet available)';
+      decodeHtmlEntities(thread.subject) || '(No subject available)';
     row.appendChild(snippetCell);
 
     const nbMessages = document.createElement('td');
@@ -35,6 +35,7 @@ export function displayThreads(threads: any[]): void {
       markasread.textContent = 'Mark as read';
       UNREADCell.appendChild(markasread);
       markasread.addEventListener('click', function () {
+        snippetCell.removeChild(bluedot);
         UNREADCell.classList.add('READ');
         snippetCell.classList.add('READ');
         threadIdCell.classList.add('READ');
@@ -42,6 +43,7 @@ export function displayThreads(threads: any[]): void {
         document.createElement('button');
         markasread.classList.add('button');
         markasread.textContent = 'Mark as unread';
+
         markAsRead(thread.id);
       });
       threadIdCell.classList.add('UNREAD');
@@ -52,6 +54,7 @@ export function displayThreads(threads: any[]): void {
     } else {
       const readCell = document.createElement('td');
       row.appendChild(readCell);
+      const bluedot = document.createElement('span');
 
       row.classList.add('READ');
       const markasunread = document.createElement('button');
@@ -63,9 +66,10 @@ export function displayThreads(threads: any[]): void {
         snippetCell.classList.add('UNREAD');
         threadIdCell.classList.add('UNREAD');
         nbMessages.classList.add('UNREAD');
-        document.createElement('button');
-        markasunread.classList.add('button');
+        document.createElement('UNbutton');
+        markasunread.classList.add('UNbutton');
         markasunread.textContent = 'Mark as read';
+        snippetCell.appendChild(bluedot);
 
         markAsUnread(thread.id);
       });
