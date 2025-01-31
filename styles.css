@@ -57,11 +57,21 @@ html {
 }
 
 .dot {
+  margin-right: 10px;
   height: 15px;
   width: 15px;
   border-radius: 50%;
   display: inline-block;
+  align-items: normal;
   background: linear-gradient(45deg, #0000b4, #00009a);
+}
+
+tr.UNREAD .bluedot {
+  display: inline-block;
+}
+
+tr .bluedot {
+  display: none;
 }
 
 .felipa-regular {
@@ -95,8 +105,4 @@ html {
 button :active {
   transform: scale(1); /* Réduit l'agrandissement au clic */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre plus légère au clic */
-}
-
-.messages-container {
-  transition: all 0.3s ease-in-out;
 }
