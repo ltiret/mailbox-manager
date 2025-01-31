@@ -40,7 +40,9 @@ export function displayThreads(threads: any[]): void {
       UNREADCell.appendChild(markasread);
 
       markasread.addEventListener('click', function () {
+        row.classList.add('READ');
         row.classList.remove('unread');
+
         document.createElement('button');
         markasread.textContent = 'Mark as unread';
         markAsRead(thread.id);
@@ -56,6 +58,7 @@ export function displayThreads(threads: any[]): void {
 
       markasunread.addEventListener('click', function () {
         row.classList.add('unread');
+        row.classList.remove('READ');
 
         const markasread = document.createElement('button');
         const UNREADCell = document.createElement('td');
