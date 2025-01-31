@@ -38,7 +38,7 @@ html {
   font-weight: bold;
 }
 
-.UNREAD {
+.unread {
   font-weight: 900;
   background-color: #d7d7d7;
   color: black;
@@ -56,7 +56,11 @@ html {
   font-weight: normal;
 }
 
-.dot {
+tr.unread .bluedot {
+  display: inline-block;
+}
+
+tr .bluedot {
   margin-right: 10px;
   height: 15px;
   width: 15px;
@@ -64,13 +68,6 @@ html {
   display: inline-block;
   align-items: normal;
   background: linear-gradient(45deg, #0000b4, #00009a);
-}
-
-tr.UNREAD .bluedot {
-  display: inline-block;
-}
-
-tr .bluedot {
   display: none;
 }
 
